@@ -1,0 +1,205 @@
+{% extends 'todo_app/footer.html' %}
+{% block content %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ООО КРАССУЛА</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% load static %}
+  
+    <link rel="stylesheet" href="{% static 'todo_app/css/style.css' %}">
+	<link rel="shortcut icon" type="image/png" href="{% static 'todo_app/img/favicon.ico' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="logo col-lg-4 d-inline col-md-12 text-center">
+                  <a href="/"><img src="{% static 'todo_app/img/logo.png' %}" class="logo-image"></a>
+					
+					
+				</div>
+				<div class="col-lg-8 contacts-header ">
+				<div class="phone d-inline-block">
+					<div class="d-inline-block phone-icon">
+					<img src="{% static 'todo_app/img/phone.png' %}" class="contacts-icon">
+					
+					</div>
+					<div class="d-inline-block phone-text">
+						<span>+7-495-211-67-64</span>
+					</div>
+				</div>
+				<div class="phone d-inline-block">
+					<div class="d-inline-block phone-icon">
+					<img src="{% static 'todo_app/img/mail.png' %}" class="contacts-icon">
+					
+					</div>
+					<div class="d-inline-block phone-text">
+						<span>oookrassula@gmail.com</span>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</header>
+    {% if er is 1 %}
+    <script>
+  alert('Сообщение отправлено');
+</script>
+    {% endif %}
+    <nav class="navbar navbar-expand-md navbar-dark ">
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="contacts-button">
+			<img src="{% static 'todo_app/img/phone.png' %}" class="contacts-icon">
+			
+		</div>
+		<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+			<ul class="navbar-nav justify-content-center">
+				<li class="nav-item ">
+					<a class="nav-link" href="/">ГЛАВНАЯ <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/about">О НАС</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/catalog">ПРОДУКЦИЯ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/akcii">АКЦИИ</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link " href="/news">НОВОСТИ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/contacts">КОНТАКТЫ</a>
+				</li>
+				
+			</ul>
+		</div>
+	</nav>
+	
+	<section class="first-block">
+		<div class="container-fluid main-about text-center ">
+		
+			<h1 class="align-middle">О НАС</h1>
+			
+		
+		</div>
+      <div class="container-fluid">
+		<nav aria-label="breadcrumb">
+  <ol class="breadcrumb bg-white">
+    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+    <li class="breadcrumb-item " aria-current="page">О нас</li>
+  </ol>
+		</nav>
+      </div>
+	</section>
+
+	<section class="third-block mr-40">
+		<div class="container-fluid about">
+			<div class="row">
+				<div class="col-lg-5 about-us2 hidden-xs">
+				</div>
+				<div class="col-lg-7 about-text col-sm-12 ">
+					<div class="about-content2 text-left ">
+						<div class="title-block">
+							<h2 class="text-white">О КОМПАНИИ</h2>
+						</div>
+						<div class="text-about2 ">
+						<span class="text-about text-white">
+						ООО КРАССУЛА - молодая и перспективная компания. Наша команда занимается мелкими и крупными оптовыми продажами глубокой заморозки уже
+ более 1 года.  Мы осуществляем доставку продукции по Москве и Московской области. Подробнее об этом можно узнать на странице
+сайта или по телефону.  
+У нас на сайте представлен большой выбор продуктов питания. Отруба индейки, свинины, говядины, а также морепродукты, 
+рыба, овощи и фрукты - все это можете найти на
+ нашем сайте. Качество и свежесть
+нашего товара гарантируем! Всего ассортимент продукции составляет более 100 наименований. Для более быстрого просмотра всей нашей 
+продукции, вы можете скачать наш прайс-лист. В нем представлен каждый товар(фото, цена и описание) в удобном формате
+для просмотра. 
+Мы делаем основной упор на товар отечественного
+производства, но также в наличии есть продукты с разных стран по всему миру. Помимо этого, наша компания имеет ряд исключительных особенностей. На нашу продукцию установлены невысокие цены
+, вдобавок к этому цены обсуждаются, т.е. можно договориться о существенном снижении цены.
+						</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <section class="fourth-block mg-40">
+		<div class="container-fluid about">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+          <h2>ОТЗЫВЫ О НАС</h2>
+            </div>
+          </div>
+			<div class="row">
+				<div class="col-lg-7  col-sm-12" style="    max-height: 582px;
+    overflow: auto;">
+                  {% for feed in feedback %}
+                  {% if feed.raiting == 1 %}
+                  <div class="alert alert-success" role="alert">
+                   {% else %} 
+                   <div class="alert alert-danger" role="alert">
+                   {% endif %} 
+                   <strong>{{ feed.user }}</strong> <br>               
+  					{{feed.text}}
+					</div>
+                  {% endfor %}
+				</div>
+				<div class="col-lg-5 about-text col-sm-12 ">
+					<div class=" text-center " style="margin-top:50px">
+						<div class="title-block">
+							<h2 class="text-white"> ДОБАВИТЬ ОТЗЫВ</h2>
+						</div>
+						<form style="margin-top:40px" method="post">
+  <div class="form-group" >{% csrf_token %}
+    {{form}}
+
+  </div>
+                          <div class="like mr-10">
+                          <label>Нравится сайт?</label>
+                          <div class="row ">
+                          
+                          <div class="col-lg-6">
+                            <div class="button-about">
+							<button type="button" class="add-feedback" id="yes">
+								ДА
+							</button>
+						</div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="button-about">
+							<button  type="button" class="add-feedback2" id="no">
+								НЕТ
+							</button>
+						</div>
+                          </div>
+                             </div>
+                          </div>
+						<div class="button-about">
+							<button type="submit" class="full-about">
+								ОТПРАВИТЬ
+							</button>
+						</div>
+                      </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+			<div class="scrollup">
+  <!-- Иконка fa-chevron-up (Font Awesome) -->
+  <i class="fa fa-chevron-up"></i>
+</div>
+{% endblock %}

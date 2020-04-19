@@ -1,0 +1,147 @@
+{% extends 'todo_app/footer.html' %}
+{% block content %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ООО КРАССУЛА</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% load static %}
+  
+    <link rel="stylesheet" href="{% static 'todo_app/css/style.css' %}">
+	<link rel="shortcut icon" type="image/png" href="{% static 'todo_app/img/favicon.ico' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="logo col-lg-4 d-inline col-md-12 text-center">
+                  <a href="/"><img src="{% static 'todo_app/img/logo.png' %}" class="logo-image"></a>
+					
+					
+				</div>
+				<div class="col-lg-8 contacts-header ">
+				<div class="phone d-inline-block">
+					<div class="d-inline-block phone-icon">
+					<img src="{% static 'todo_app/img/phone.png' %}" class="contacts-icon">
+					
+					</div>
+					<div class="d-inline-block phone-text">
+						<span>+7-495-211-67-64</span>
+					</div>
+				</div>
+				<div class="phone d-inline-block">
+					<div class="d-inline-block phone-icon">
+					<img src="{% static 'todo_app/img/mail.png' %}" class="contacts-icon">
+					
+					</div>
+					<div class="d-inline-block phone-text">
+						<span>oookrassula@gmail.com</span>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</header>
+    {% if er is 1 %}
+    <script>
+  alert('Сообщение отправлено');
+</script>
+    {% endif %}
+    <nav class="navbar navbar-expand-md navbar-dark ">
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="contacts-button">
+			<img src="{% static 'todo_app/img/phone.png' %}" class="contacts-icon">
+			
+		</div>
+		<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+			<ul class="navbar-nav justify-content-center">
+				<li class="nav-item ">
+					<a class="nav-link" href="/">ГЛАВНАЯ <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/about">О НАС</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="/catalog">ПРОДУКЦИЯ</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link " href="/akcii">АКЦИИ</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link " href="/news">НОВОСТИ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/contacts">КОНТАКТЫ</a>
+				</li>
+
+			</ul>
+		</div>
+	</nav>
+	<section class="first-block">
+		<div class="container-fluid main-sales text-center ">
+		
+			<h1 class="align-middle">АКЦИИ</h1>
+			
+		
+		</div>
+       <div class="container-fluid">
+		<nav aria-label="breadcrumb">
+  <ol class="breadcrumb bg-white">
+    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+    <li class="breadcrumb-item " aria-current="page">Акции</li>
+  </ol>
+		</nav>
+      </div>
+	</section>
+	
+	<section class="third-block mr-40 text-center">
+      <div class="container">
+        <div class="row">
+        {% for product in pr %}
+              
+			<div class="col-lg-6 col-md-6 col-xl-4 category-main text-center slide"> 
+				<div class="category text-center" >
+					<div class="category-photo" style="position:relative">
+                      {% if product.price_sale != product.price %}
+              <div class="sticker_aktsiya" style="position:absolute; ">Акция
+              </div>
+                 {% endif %}
+                      <a href="/product/{{ product.slug }}"><img src="{{ product.photo }}" class="zoom"></a>
+					</div>
+					<div class="category-title">
+                      <a href="/product/{{ product.slug }}"><span>{{ product.name }}</span></a>
+                             
+					</div>
+                  <div class="category-type mr-10">
+						<span>{{ product.type_product }}</span>
+					</div>
+                  <div class="category-price mr-10">
+						<span>{{ product.price }} руб.</span>
+					</div>
+					<div class="category-button">
+						<a href="/product/{{ product.slug }}"><button>Перейти</button></a>
+					</div>
+				</div>
+			</div>
+                
+            {% endfor %}
+        </div>
+      </div>
+      {% if not pr %}
+		<span >Акций нет</span>
+      {% endif %}
+	</section>
+		<div class="scrollup">
+  <!-- Иконка fa-chevron-up (Font Awesome) -->
+  <i class="fa fa-chevron-up"></i>
+</div>
+{% endblock %}

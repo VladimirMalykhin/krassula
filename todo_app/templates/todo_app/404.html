@@ -1,0 +1,97 @@
+{% extends 'todo_app/footer.html' %}
+{% block content %}
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ООО КРАССУЛА</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% load static %}
+  
+    <link rel="stylesheet" href="{% static 'todo_app/css/style.css' %}">
+	<link rel="shortcut icon" type="image/png" href="{% static 'todo_app/img/favicon.ico' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+		<div class="container">
+			<div class="row">
+				<div class="logo col-lg-4 d-inline col-md-12 text-center">
+					<img src="{% static 'todo_app/img/logo.png' %}" class="logo-image">
+					
+					
+				</div>
+				<div class="col-lg-8 contacts-header ">
+				<div class="phone d-inline-block">
+					<div class="d-inline-block phone-icon">
+					<img src="{% static 'todo_app/img/phone.png' %}" class="contacts-icon">
+					
+					</div>
+					<div class="d-inline-block phone-text">
+						<span>+79161233045</span>
+					</div>
+				</div>
+				<div class="phone d-inline-block">
+					<div class="d-inline-block phone-icon">
+					<img src="{% static 'todo_app/img/mail.png' %}" class="contacts-icon">
+					
+					</div>
+					<div class="d-inline-block phone-text">
+						<span>krassula@mail.ru</span>
+					</div>
+				</div>
+				<div class="phone d-inline-block">
+					<div class="d-inline-block phone-icon">
+					<img src="{% static 'todo_app/img/locate.png' %}" class="contacts-icon">
+					</div>
+					<div class="d-inline-block phone-text">
+						<span>г. Москва ул. Иванова д. 1</span>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</header>
+    <nav class="navbar navbar-expand-md navbar-dark ">
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="contacts-button">
+			<img src="{% static 'todo_app/img/phone.png' %}" class="contacts-icon">
+			
+		</div>
+		<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+			<ul class="navbar-nav justify-content-center">
+				<li class="nav-item ">
+					<a class="nav-link" href="/">ГЛАВНАЯ <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/about">О НАС</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="/catalog">ПРОДУКЦИЯ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/akcii">АКЦИИ</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link " href="/news">НОВОСТИ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link " href="/contacts">КОНТАКТЫ</a>
+				</li>
+				
+				<li class="nav-item d-lg-none d-sm-block d-md-none bg-dark">
+					<a class="nav-link " href="#">ПОИСК</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+
+	{% endblock %}
